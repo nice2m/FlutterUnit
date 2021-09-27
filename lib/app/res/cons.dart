@@ -1,11 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_unit/app/res/toly_icon.dart';
-import 'package:flutter_unit/views/components/permanent/code/highlighter_style.dart';
+import 'package:flutter_unit/components/permanent/code/highlighter_style.dart';
+
+import 'toly_icon.dart';
 
 class Cons {
-  static String version = 'V1.1.0';
 
   static const MENU_INFO = <String>["关于", "帮助", "问题反馈"]; //菜单栏
+
+
+  static const List<Color> tabColors = [
+    Color(0xff44D1FD),
+    Color(0xffFD4F43),
+    Color(0xffB375FF),
+    Color(0xFF4CAF50),
+    Color(0xFFFF9800),
+    Color(0xFF00F1F1),
+    Color(0xFFDBD83F),
+  ];
+
   static const ICONS_MAP = {
     //底栏图标
     "组件集录": TolyIcon.icon_layout, "收藏集录": TolyIcon.icon_star,
@@ -13,25 +25,6 @@ class Cons {
     "要点集录": TolyIcon.icon_bug,
   };
 
-  static const rainbow = <int>[
-    0xffff0000,
-    0xffFF7F00,
-    0xffFFFF00,
-    0xff00FF00,
-    0xff00FFFF,
-    0xff0000FF,
-    0xff8B00FF
-  ];
-
-  static const tabColors = [
-    0xff44D1FD,
-    0xffFD4F43,
-    0xffB375FF,
-    0xFF4CAF50,
-    0xFFFF9800,
-    0xFF00F1F1,
-    0xFFDBD83F
-  ];
   static const tabs = <String>[
     'Stles',
     'Stful',
@@ -51,7 +44,7 @@ class Cons {
     'Neucha'
   ];
 
-  static var codeThemeSupport = <HighlighterStyle, String>{
+  static Map<HighlighterStyle, String> codeThemeSupport = <HighlighterStyle, String>{
     HighlighterStyle.fromColors(HighlighterStyle.gitHub):"GitHub - Power By 张风捷特烈",
     HighlighterStyle.fromColors(HighlighterStyle.darkColor):"捷特黑 - Power By 张风捷特烈",
     HighlighterStyle.fromColors(HighlighterStyle.lightColor):"捷特白 - Power By 张风捷特烈",

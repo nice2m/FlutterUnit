@@ -1,10 +1,15 @@
-import 'dart:io';
-
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_unit/views/app/bloc_wrapper.dart';
-import 'views/app/flutter_app.dart';
+
+import 'app/views/navigation/bloc_wrapper.dart';
+import 'app/views/navigation/flutter_unit.dart';
+
 
 void main() {
-  print(Directory.current.path);
-  runApp(BlocWrapper(child: FlutterApp()));
+  WidgetsFlutterBinding.ensureInitialized();
+  //滚动性能优化 1.22.0
+  GestureBinding.instance?.resamplingEnabled = true;
+  runApp(BlocWrapper(child: FlutterUnit()));
 }
+
+

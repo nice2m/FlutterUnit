@@ -4,6 +4,20 @@ import 'package:flutter/widgets.dart';
 class TolyIcon {
 
     TolyIcon._();
+static const IconData upload_success = const IconData( 0xe60b, fontFamily: "TolyIcon");
+static const IconData download = const IconData( 0xea51, fontFamily: "TolyIcon");
+static const IconData upload = const IconData( 0xea52, fontFamily: "TolyIcon");
+static const IconData error = const IconData( 0xe614, fontFamily: "TolyIcon");
+static const IconData dingzhi1 = const IconData( 0xe60e, fontFamily: "TolyIcon");
+static const IconData icon_collect = const IconData( 0xe672, fontFamily: "TolyIcon");
+static const IconData yonghu = const IconData( 0xe619, fontFamily: "TolyIcon");
+static const IconData icon_common = const IconData( 0xe634, fontFamily: "TolyIcon");
+static const IconData icon_see = const IconData( 0xe608, fontFamily: "TolyIcon");
+static const IconData icon_issues = const IconData( 0xe7a7, fontFamily: "TolyIcon");
+static const IconData icon_fork = const IconData( 0xe623, fontFamily: "TolyIcon");
+static const IconData icon_github_star = const IconData( 0xe7df, fontFamily: "TolyIcon");
+static const IconData icon_show = const IconData( 0xe648, fontFamily: "TolyIcon");
+static const IconData icon_hide = const IconData( 0xe649, fontFamily: "TolyIcon");
 static const IconData icon_email = const IconData( 0xe694, fontFamily: "TolyIcon");
 static const IconData icon_github = const IconData( 0xe689, fontFamily: "TolyIcon");
 static const IconData icon_juejin = const IconData( 0xe601, fontFamily: "TolyIcon");
