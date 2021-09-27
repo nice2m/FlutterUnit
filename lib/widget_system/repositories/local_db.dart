@@ -1,3 +1,4 @@
+import 'dao/db_setup/setup_db.dart';
 import 'dao/like_dao.dart';
 import 'package:path/path.dart' as path;
 import 'package:sqflite/sqflite.dart';

@@ -7,6 +7,7 @@ import 'package:flutter_unit/app/blocs/global/global_state.dart';
 import 'package:flutter_unit/app/res/cons.dart';
 import 'package:flutter_unit/app/res/sp.dart';
 
+import 'dao/db_setup/setup_db.dart';
 import 'local_db.dart';
 import 'package:path/path.dart' as path;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -33,7 +34,7 @@ class AppStart {
     } else {
       print("=====flutter.db 已存在====");
     }
-
+    setupDatabase();
     await LocalDb.instance.initDb();
 
     bool showBg = prefs.getBool(SP.showBackground) ?? true;
