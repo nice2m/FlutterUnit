@@ -44,6 +44,7 @@ class _WidgetDetailPageState extends State<WidgetDetailPage> {
     return Scaffold(
       endDrawer: CategoryEndDrawer(widget: _modelStack.last),
       appBar: AppBar(
+        leading: BackButton(),
         title: Text(_modelStack.last.name),
         actions: <Widget>[
           _buildToHome(),
