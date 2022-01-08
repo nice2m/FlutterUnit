@@ -90,10 +90,8 @@ class _BottomNavigationBarWithPageViewState
       showSelectedLabels: true,
       items: iconsMap.keys
           .map((key) => BottomNavigationBarItem(
-              title: Text(
-                key,
-              ),
-              icon: Icon(iconsMap[key]),
+          label: key,
+          icon: Icon(iconsMap[key]),
               backgroundColor: _colors[_position]))
           .toList(),
     );
