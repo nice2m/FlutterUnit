@@ -34,7 +34,7 @@ class CategoryListItem extends StatelessWidget {
 
   }
 
-  _buildChild(BuildContext context) {
+  Widget _buildChild(BuildContext context) {
     final Color themeColor = Theme.of(context).primaryColor;
     return Column(
       children: <Widget>[

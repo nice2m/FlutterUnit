@@ -47,7 +47,7 @@ class CategoryShow extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 color: Colors.red,
                 child: const Icon(
-                  CupertinoIcons.delete_solid,
+                  Icons.delete_outline,
                   color: Colors.white,
                   size: 30,
                 ),

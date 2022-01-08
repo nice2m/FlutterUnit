@@ -16,7 +16,7 @@ class LikeWidgetPage extends StatelessWidget {
 
   final SliverGridDelegate gridDelegate =
       const SliverGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: 2,
+    crossAxisCount: 3,
     mainAxisSpacing: 10,
     crossAxisSpacing: 10,
     childAspectRatio: 1 / 0.5,

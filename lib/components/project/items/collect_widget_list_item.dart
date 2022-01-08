@@ -52,7 +52,7 @@ class CollectWidgetListItem extends StatelessWidget {
                 onDeleteItemClick?.call(data);
               },
               child: const Icon(
-                CupertinoIcons.delete_solid,
+                Icons.delete_outline,
                 color: Colors.red,
               ),
             ))

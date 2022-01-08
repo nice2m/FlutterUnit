@@ -73,11 +73,11 @@ class _GalleryDetailPageState extends State<GalleryDetailPage> {
       body: Column(
         children: [
           Expanded(
-            flex: 20,
+            flex: 25,
             child: buildTopBar(context),
           ),
           Expanded(
-              flex: 80,
+              flex: 75,
               child: PageView(
                 controller: _ctrl,
                 children: widget.children,
@@ -174,9 +174,10 @@ class _GalleryDetailPageState extends State<GalleryDetailPage> {
 
   Widget buildTitle(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(top: 46, bottom: 10, left: 20, right: 10),
+      padding: const EdgeInsets.only(top: 10, bottom: 10, left: 20, right: 10),
       child: Row(
         children: [
+          BackButton(color: Colors.white,),
           Text(
             widget.galleryInfo.name,
             style: TextStyle(

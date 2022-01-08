@@ -65,7 +65,7 @@ class CategoryPage extends StatelessWidget {
     );
   }
 
-  _deleteCollect(BuildContext context, CategoryModel model) {
+  void _deleteCollect(BuildContext context, CategoryModel model) {
     showDialog(
         context: context,
         builder: (ctx) => Dialog(
@@ -87,7 +87,7 @@ class CategoryPage extends StatelessWidget {
             ));
   }
 
-  _editCollect(BuildContext context, CategoryModel model) {
+  void _editCollect(BuildContext context, CategoryModel model) {
     showDialog(
         context: context,
         builder: (ctx) => Dialog(
@@ -126,7 +126,7 @@ class CategoryPage extends StatelessWidget {
             ));
   }
 
-  _toDetailPage(BuildContext context, CategoryModel model) {
+  void _toDetailPage(BuildContext context, CategoryModel model) {
     BlocProvider.of<CategoryWidgetBloc>(context).add(EventLoadCategoryWidget(model.id!));
     Navigator.pushNamed(context, UnitRouter.category_show, arguments: model);
   }

@@ -12,6 +12,7 @@ import 'package:flutter_unit/app/views/unit_todo/point_unit_page.dart';
 import 'package:flutter_unit/components/components.dart';
 import 'package:flutter_unit/components/permanent/circle_image.dart';
 import 'package:flutter_unit/components/permanent/feedback_widget.dart';
+import 'package:flutter_unit/painter_system/gallery_unit.dart';
 import 'package:flutter_unit/widget_system/views/widget_system_view.dart';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -75,7 +76,9 @@ class _UnitNavigationState extends State<UnitNavigation> {
                           children: <Widget>[
                             HomePage(),
                             CollectPage(),
-                            PaintUnitPage(),
+                            GalleryUnit(),
+                            // GalleryPage(),
+                            // PaintUnitPage(),
                             LayoutUnitPage(),
                             BugUnitPage(),
                           ],

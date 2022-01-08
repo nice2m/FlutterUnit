@@ -110,6 +110,7 @@ class _CategoryInfoState extends State<CategoryInfo> {
       padding: const EdgeInsets.symmetric(horizontal: 10.0),
       child: Wrap(
         alignment: WrapAlignment.spaceBetween,
+        runSpacing: 10,
         spacing: 5,
         children: categories.map((e) => _buildItem(e)).toList(),
       ),

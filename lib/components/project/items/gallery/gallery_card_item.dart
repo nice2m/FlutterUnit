@@ -30,7 +30,7 @@ class GalleryCardItem extends StatelessWidget {
               Hero(
                 tag: galleryInfo.name,
                 child: Container(
-                    height: 160,
+                    height: 120,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             fit: BoxFit.cover,
@@ -51,7 +51,7 @@ class GalleryCardItem extends StatelessWidget {
                     Text(
                       galleryInfo.name,
                       style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                           shadows: [
                             Shadow(
@@ -80,7 +80,9 @@ class GalleryCardItem extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
                 child: Text(
                   galleryInfo.info,
-                  style: TextStyle(color: Colors.grey, shadows: [
+                  style: TextStyle(
+                      fontSize: 13,
+                      color: Colors.grey, shadows: [
                     Shadow(
                         color: Theme.of(context).primaryColor,
                         offset: const Offset(.2, .2),

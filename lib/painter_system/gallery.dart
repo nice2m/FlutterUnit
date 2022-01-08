@@ -136,54 +136,61 @@ class FrameShower extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.topCenter,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
+    return Container(
+      // color: Colors.red,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          SizedBox(height: 15,),
-          Text(
-            title,
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          Expanded(
+            child: Align(
+              alignment: Alignment(0,-0.7),
+              child: Wrap(
+                direction: Axis.vertical,
+                spacing: 5,
+                children: [
+                  Text(
+                    title,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "作者:  $author    ",
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "源码地址    ",
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent),
+                  ),
+                ],
+              ),
+            ),
           ),
+
           PictureFrame(
-            width: MediaQuery.of(context).size.shortestSide,
-            height: MediaQuery.of(context).size.shortestSide,
+            width: MediaQuery.of(context).size.shortestSide*0.6,
+            height: MediaQuery.of(context).size.shortestSide*0.6,
             child: content,
           ),
 
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 12),
-            child: Row(
+          Expanded(
+            child: Column(
               children: [
-                Text(
-                  "作者:    $author    ",
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                Spacer(flex: 70,),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text(
+                    info,
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey),
+                  ),
                 ),
-                Spacer(),
-                Text(
-                  "源码地址    ",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent),
-                ),
+                Spacer(flex: 20,),
+
               ],
             ),
           ),
-          SizedBox(
-            height: 10,
-          ),
-          Container(
-              padding: EdgeInsets.symmetric(horizontal: 12),
-              alignment: Alignment.topLeft,
-              child: Text(
-                info,
-                style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold),
-              )),
+
         ],
       ),
     );
